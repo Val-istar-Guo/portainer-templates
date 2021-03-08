@@ -1,0 +1,63 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 2,
+      "title": "shadowsocks-libev",
+      "description": "shadowsocks/shadowsocks-libev",
+      "note": "部署前建议修改端口号、加密方式及密码。",
+      "logo": "https://raw.githubusercontent.com/Val-istar-Guo/portainer-templates/master/images/shadowsocks-libev.png",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/shadowsocks-libev.yml"
+      },
+      "env": [
+        {
+          "name": "METHOD",
+          "label": "加密方式",
+          "default": "aes-256-cfb"
+        },
+        {
+          "name": "PASSWORD",
+          "label": "密码"
+        },
+        {
+          "name": "PORT",
+          "label": "端口",
+          "default": "8388"
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "title": "Nginx Proxy Manager",
+      "description": "Nginx 界面化管理平台",
+      "logo": "https://nginxproxymanager.com/icon.png",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/nginx-proxy-manager.yml"
+      },
+      "administrator_only": true
+    },
+    {
+      "type": 2,
+      "title": "phpMyAdmin With mariadb",
+      "description": "配备phpMyAdmin管理界面的mariadb数据库，适合用于搭建项目的开发环境数据库。",
+      "logo": "https://raw.githubusercontent.com/docker-library/docs/fe985dcb24154456254e252d1fa4a2b6b656ee80/mariadb/logo.png",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/phpmyadmin-mariadb.yml"
+      }
+    },
+    {
+      "type": 2,
+      "title": "KafKa",
+      "description": "具备KafKa管理工具的KafKa",
+      "logo": "https://raw.githubusercontent.com/Val-istar-Guo/portainer-templates/master/images/kafka.png",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/kafka.yml"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+version: '3'
+services:
+  app:
+    image: jc21/nginx-proxy-manager:latest
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+    environment:
+      DB_MYSQL_HOST: db
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: nginx
+      DB_MYSQL_PASSWORD: nginx
+      DB_MYSQL_NAME: nginx
+    volumes:
+      - nginx_data:/data
+      - nginx_letsencrypt:/etc/letsencrypt
+    depends_on:
+      - db
+  db:
+    image: jc21/mariadb-aria:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: nginx
+      MYSQL_DATABASE: nginx
+      MYSQL_USER: nginx
+      MYSQL_PASSWORD: nginx
+    volumes:
+      - nginx_mysql:/var/lib/mysql
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+volumes:
+  nginx_data:
+  nginx_letsencrypt:
+  nginx_mysql:
