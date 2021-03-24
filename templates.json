@@ -58,6 +58,16 @@
         "url": "https://github.com/val-istar-guo/portainer-templates",
         "stackfile": "swarm-compose/kafka.yml"
       }
+    },
+    {
+      "type": 2,
+      "title": "OpenWRT安装源",
+      "description": "WRT3200ACM个人定制安装源",
+      "logo": "https://raw.githubusercontent.com/Val-istar-Guo/portainer-templates/master/images/openwrt.png",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/openwrt-packages-arm_cortex-a9_vfpv3-d16.yml"
+      }
     }
   ]
 }

@@ -1,0 +1,4 @@
+version: '3'
+services:
+  packages:
+    image: valistarguo/openwrt-packages-arm_cortex-a9_vfpv3-d16
