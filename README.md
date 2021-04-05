@@ -5,7 +5,10 @@
  名称                 | 描述
  :-------------------|:---
  Nginx Proxy Manager | [Nginx Proxy Manager](https://nginxproxymanager.com/)
- shadowsocks-libev    | 仅部署`node.labels.application == shadowsocks-libev`的节点
+ shadowsocks-libev   | 仅部署`node.labels.application == shadowsocks-libev`的节点
+ LDAP                | ldap + phpldapadmin
+ Kafka               | kafka + kafka-manager
+ Mariadb             | mariadb + phpmyadmin
 
 
 ## Labels

@@ -68,6 +68,39 @@
         "url": "https://github.com/val-istar-guo/portainer-templates",
         "stackfile": "swarm-compose/openwrt-packages-arm_cortex-a9_vfpv3-d16.yml"
       }
+    },
+    {
+      "type": 2,
+      "title": "LDAP",
+      "description": "LDAP 权限管理工具",
+      "note": "phpldapadmin管理界面默认端口号443",
+      "logo": "https://i1.wp.com/ldap.com/wp-content/uploads/2018/04/ldapdotcom-transparent-background-without-text-48x48.png?resize=48%2C48&ssl=1",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/ldap.yml"
+      },
+      "env": [
+        {
+          "name": "LDAP_ORGANISATION",
+          "label": "组织/公司名称",
+          "default": "Example Inc"
+        },
+        {
+          "name": "LDAP_DOMAIN",
+          "label": "域",
+          "default": "example.com"
+        },
+        {
+          "name": "LDAP_ADMIN_PASSWORD",
+          "label": "管理员密码",
+          "default": "admin"
+        },
+        {
+          "name": "PHPLDAPADMIN_HTTPS",
+          "label": "phpldapadmin管理界面强制HTTPS",
+          "default": "true"
+        }
+      ]
     }
   ]
 }
