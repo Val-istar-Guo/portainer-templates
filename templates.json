@@ -96,9 +96,47 @@
           "default": "admin"
         },
         {
+          "name": "LDAP_READONLY_USER",
+          "label": "启动LDAP只读用户",
+          "select": [
+            {
+              "text": "启用",
+              "value": "true"
+            },
+            {
+              "text": "禁用",
+              "value": "false",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "LDAP_READONLY_USER_USERNAME",
+          "label": "LDAP只读用户用户名",
+          "description": "未启用只读用户请忽略此选项",
+          "default": "readonly"
+        },
+        {
+          "name": "LDAP_READONLY_USER_PASSWORD",
+          "label": "LDAP只读用户密码",
+          "description": "未启用只读用户请忽略此选项",
+          "default": "readonly"
+        },
+        {
           "name": "PHPLDAPADMIN_HTTPS",
           "label": "phpldapadmin管理界面强制HTTPS",
-          "default": "true"
+          "default": "true",
+          "select": [
+            {
+              "text": "启用",
+              "value": "true",
+              "default": true
+            },
+            {
+              "text": "禁用",
+              "value": "false"
+            }
+          ]
         }
       ]
     }
