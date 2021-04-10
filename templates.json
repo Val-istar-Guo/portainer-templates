@@ -47,7 +47,19 @@
       "repository": {
         "url": "https://github.com/val-istar-guo/portainer-templates",
         "stackfile": "swarm-compose/phpmyadmin-mariadb.yml"
-      }
+      },
+      "env": [
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "管理员密码",
+          "default": "changeme"
+        },
+        {
+          "name": "PORT",
+          "label": "数据库端口号",
+          "default": "3306"
+        }
+      ]
     },
     {
       "type": 2,

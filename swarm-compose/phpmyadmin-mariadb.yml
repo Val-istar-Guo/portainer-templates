@@ -4,12 +4,12 @@ services:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: changeme
+      - MYSQL_ROOT_PASSWORD
+    ports:
+      - ${PORT}:3306
 
   phpmyadmin:
     image: phpmyadmin
     restart: always
-    ports:
-      - 80:80
     links:
       - db
