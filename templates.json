@@ -151,6 +151,23 @@
           ]
         }
       ]
+    },
+    {
+      "type": 2,
+      "title": "Don't Stave Toggler",
+      "description": "饥荒服务器",
+      "note": "需要提供饥荒服务器正版Token",
+      "logo": "https://raw.githubusercontent.com/Val-istar-Guo/portainer-templates/master/images/dst.jpg",
+      "repository": {
+        "url": "https://github.com/val-istar-guo/portainer-templates",
+        "stackfile": "swarm-compose/dst.yml"
+      },
+      "env": [
+        {
+          "name": "TOKEN",
+          "label": "TOKEN"
+        }
+      ]
     }
   ]
 }

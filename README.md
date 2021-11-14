@@ -9,6 +9,7 @@
  LDAP                | ldap + phpldapadmin
  Kafka               | kafka + kafka-manager
  Mariadb             | mariadb + phpmyadmin
+ Don't Stave Toggler | 饥荒服务器
 
 
 ## Labels

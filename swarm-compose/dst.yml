@@ -1,0 +1,12 @@
+version: '3'
+services:
+  master:
+    image: valistarguo/dst:latest
+    ports:
+      - 10889:10889/udp
+      - 10998:10998/udp
+      - 10999:10999/udp
+    deploy:
+      placement:
+        constraints:
+          - node.labels.application == dst
